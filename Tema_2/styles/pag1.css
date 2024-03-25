@@ -1,0 +1,110 @@
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 5;
+    }
+
+    .box1 {
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+    .box1 h1 {
+        position: relative;
+        left: 40px;
+        top: 10px;
+    }
+
+    .box2 {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        align-self: center;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .box3 {
+        overflow: hidden;
+        object-fit: fill;
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .box3 img {
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .box4 {
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .box5 {
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .box5 table,
+    th,
+    td {
+        border: 1px solid;
+        border-collapse: collapse;
+        margin-left: 40px;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .box5 h2 {
+        position: relative;
+        left: 40px;
+        top: 16px;
+    }
+
+    .box5 img {
+        height: auto;
+        width: 20px;
+    }
+
+    /*Zoom in #2*/
+    .box3 figure img {
+        width: 300px;
+        height: auto;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    .box3 figure:hover img {
+        width: 350px;
+        height: auto;
+    }
+
+    /*Zoom in #2 pentru steagurile din tabel*/
+    .box5 img {
+        width: 20px;
+        height: auto;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    .box5 :hover img {
+        width: 45px;
+        height: auto;
+    }
+
+    * {
+        font-family: "Raleway";
+        box-sizing: border-box;
+      }

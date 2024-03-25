@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: #1b1542;
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+  text-align:center;
+  z-index: 1000;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+}
+
+.header-right a {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.header-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-toggle {
+  display: none;
+}
+
+.header-button,
+.header-button::before,
+.header-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+
+.header-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.header-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#header-toggle:checked+.header-button-container .header-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#header-toggle:checked+.header-button-container .header-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#header-toggle:checked+.header-button-container .header-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .header-button-container {
+    display:flex;
+  }
+
+  .header-right {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  #header-toggle~.header-right a {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #header-toggle:checked~.header-right a {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .header-right a {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: #222;
+  }
+
+}

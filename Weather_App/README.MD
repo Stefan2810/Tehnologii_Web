@@ -12,7 +12,7 @@ Now you can go further and create your own web based Weather application!
 This application should allow you, as a user to enter a city name (and be gently helped by an autocomplete in selecting it), and see the specific weather in that city. 
 It should have a pleasing UI/UX, that blends in an photo from the city with the rest of the application.
 
-## What are you going to learn?
+## What are the main skills learned from this task
 
 - Create a GET requests
 - Getting data from an API
@@ -22,10 +22,6 @@ It should have a pleasing UI/UX, that blends in an photo from the city with the 
 
 - There is a `<div id="root">` tag without children when the page loads in
 - All the contents are placed and removed by javascript
-
-## Hints
-
-- **For students that want to play around with frameworks, this project can also be implemented using a frontend framework like React, Vue, Svelte, htmx, etc. JQuery is not an acceptable option**
 
 ## Background materials
 - <i class="far fa-exclamation"></i> [JavaScript First steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps)
